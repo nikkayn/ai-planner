@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useRef, useCallback } from 'react'
 import { Task } from '@/lib/types'
@@ -22,7 +22,7 @@ export default function Capture({ onTasksReady }: Props) {
       (window as any).webkitSpeechRecognition
 
     if (!SpeechRecognition) {
-      alert('Ваш браузер не підтримує голосовий ввід. Використовуйте текстове поле.')
+      alert('Р’Р°С€ Р±СЂР°СѓР·РµСЂ РЅРµ РїС–РґС‚СЂРёРјСѓС” РіРѕР»РѕСЃРѕРІРёР№ РІРІС–Рґ. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓР№С‚Рµ С‚РµРєСЃС‚РѕРІРµ РїРѕР»Рµ.')
       return
     }
 
@@ -99,13 +99,13 @@ export default function Capture({ onTasksReady }: Props) {
   }
 
   const priorityColor = { high: 'bg-red-500', medium: 'bg-yellow-500', low: 'bg-green-500' }
-  const typeIcon = { meeting: '📅', task: '✅', errand: '🛒' }
+  const typeIcon = { meeting: 'рџ“…', task: 'вњ…', errand: 'рџ›’' }
 
   return (
     <div className="flex flex-col h-full p-4 gap-4">
       <div className="text-center pt-4">
-        <h1 className="text-2xl font-bold">Що в голові?</h1>
-        <p className="text-gray-400 text-sm mt-1">Виваліть все — AI розбереться</p>
+        <h1 className="text-2xl font-bold">Р©Рѕ РІ РіРѕР»РѕРІС–?</h1>
+        <p className="text-gray-400 text-sm mt-1">Р’РёРІР°Р»С–С‚СЊ РІСЃРµ вЂ” AI СЂРѕР·Р±РµСЂРµС‚СЊСЃСЏ</p>
       </div>
 
       {/* Mic button */}
@@ -118,18 +118,18 @@ export default function Capture({ onTasksReady }: Props) {
               : 'bg-indigo-600 hover:bg-indigo-500'
           }`}
         >
-          {isListening ? '⏹' : '🎤'}
+          {isListening ? 'вЏ№' : 'рџЋ¤'}
         </button>
       </div>
       {isListening && (
-        <p className="text-center text-red-400 text-sm animate-pulse">Слухаю...</p>
+        <p className="text-center text-red-400 text-sm animate-pulse">РЎР»СѓС…Р°СЋ...</p>
       )}
 
       {/* Textarea */}
       <textarea
         value={text}
         onChange={e => setText(e.target.value)}
-        placeholder="або пишіть тут... зустріч з Максом о 3, купити продукти, здати звіт до п'ятниці..."
+        placeholder="Р°Р±Рѕ РїРёС€С–С‚СЊ С‚СѓС‚... Р·СѓСЃС‚СЂС–С‡ Р· РњР°РєСЃРѕРј Рѕ 3, РєСѓРїРёС‚Рё РїСЂРѕРґСѓРєС‚Рё, Р·РґР°С‚Рё Р·РІС–С‚ РґРѕ Рї'СЏС‚РЅРёС†С–..."
         className="flex-1 bg-gray-900 rounded-2xl p-4 text-white placeholder-gray-600 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[140px]"
       />
 
@@ -139,13 +139,13 @@ export default function Capture({ onTasksReady }: Props) {
         disabled={isLoading || !text.trim()}
         className="w-full py-4 rounded-2xl bg-white text-black font-bold text-lg disabled:opacity-40 transition-all hover:bg-gray-100 active:scale-95"
       >
-        {isLoading ? '✨ Аналізую...' : '✨ Перетворити в план'}
+        {isLoading ? 'вњЁ РђРЅР°Р»С–Р·СѓСЋ...' : 'вњЁ РџРµСЂРµС‚РІРѕСЂРёС‚Рё РІ РїР»Р°РЅ'}
       </button>
 
       {/* Streaming tasks preview */}
       {streamedTasks.length > 0 && (
         <div className="flex flex-col gap-2 mt-2">
-          <p className="text-xs text-gray-500 uppercase tracking-wide">Знайдені задачі</p>
+          <p className="text-xs text-gray-500 uppercase tracking-wide">Р—РЅР°Р№РґРµРЅС– Р·Р°РґР°С‡С–</p>
           {streamedTasks.map(task => (
             <div
               key={task.id}
@@ -162,3 +162,4 @@ export default function Capture({ onTasksReady }: Props) {
     </div>
   )
 }
+
