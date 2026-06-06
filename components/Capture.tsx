@@ -13,7 +13,7 @@ export default function Capture({ onTasksReady }: Props) {
   const [isLoading, setIsLoading] = useState(false)
   const [streamedTasks, setStreamedTasks] = useState<Task[]>([])
   const accumulatedTasksRef = useRef<Task[]>([])  // avoid stale closure in setTimeout
-  const recognitionRef = useRef<SpeechRecognition | null>(null)
+  const recognitionRef = useRef<any>
   const bufferRef = useRef('')
 
   const startListening = useCallback(() => {
