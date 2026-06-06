@@ -1,0 +1,5 @@
+.git
+.git_new
+.superpowers
+node_modules
+.next
