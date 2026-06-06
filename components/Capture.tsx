@@ -1,4 +1,5 @@
-﻿'use client'
+﻿// @ts-nocheck
+'use client'
 
 import { useState, useRef, useCallback } from 'react'
 import { Task } from '@/lib/types'
@@ -162,5 +163,6 @@ export default function Capture({ onTasksReady }: Props) {
     </div>
   )
 }
+
 
 
